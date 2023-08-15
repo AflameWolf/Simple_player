@@ -11,44 +11,48 @@ from PyQt5.QtCore import QUrl
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Simple_player(object):
-    def setupUi(self, Simple_player):
-        Simple_player.setObjectName("Simple_player")
-        Simple_player.resize(350, 191)
-        Simple_player.setStyleSheet("background-color: rgb(77, 77, 77);")
-        self.centralwidget = QtWidgets.QWidget(Simple_player)
-        self.centralwidget.setObjectName("centralwidget")
+
+    def horizontalSlider_reg(self):
         self.horizontalSlider = QtWidgets.QSlider(self.centralwidget)
         self.horizontalSlider.setGeometry(QtCore.QRect(0, 120, 350, 22))
         self.horizontalSlider.setStyleSheet("\n"
-"background-color: rgb(0, 0, 0);\n"
-"border: 4px solid #7922CC;\n"
-"border-color: rgb(220, 152, 107);\n"
-"border-radius:2px;")
+                                            "background-color: rgb(0, 0, 0);\n"
+                                            "border: 4px solid #7922CC;\n"
+                                            "border-color: rgb(220, 152, 107);\n"
+                                            "border-radius:2px;")
         self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider.setObjectName("horizontalSlider")
+    def dial_volume_reg(self):
         self.dial_volume = QtWidgets.QDial(self.centralwidget)
         self.dial_volume.setGeometry(QtCore.QRect(20, 20, 50, 64))
         self.dial_volume.setObjectName("dial_volume")
+    def label_v0_reg(self):
         self.label_v0 = QtWidgets.QLabel(self.centralwidget)
         self.label_v0.setGeometry(QtCore.QRect(20, 70, 16, 16))
         self.label_v0.setStyleSheet("background-color: rgb(139, 139, 139);\n"
-"border: 1px solid #7922CC;\n"
-"border-radius:2px;")
+                                    "border: 1px solid #7922CC;\n"
+                                    "border-radius:2px;")
         self.label_v0.setAlignment(QtCore.Qt.AlignCenter)
         self.label_v0.setObjectName("label_v0")
+    def label_v100_reg(self):
         self.label_v100 = QtWidgets.QLabel(self.centralwidget)
         self.label_v100.setGeometry(QtCore.QRect(50, 70, 21, 16))
         self.label_v100.setStyleSheet("background-color: rgb(139, 139, 139);\n"
-"border: 1px solid #7922CC;\n"
-"border-radius:2px;")
+                                      "border: 1px solid #7922CC;\n"
+                                      "border-radius:2px;")
         self.label_v100.setAlignment(QtCore.Qt.AlignCenter)
         self.label_v100.setObjectName("label_v100")
+    def layoutWidget_reg(self):
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.layoutWidget.setGeometry(QtCore.QRect(80, 150, 181, 31))
         self.layoutWidget.setObjectName("layoutWidget")
+
+    def horizontalLayout_reg(self):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
+
+    def pushButton_time_back_reg(self):
         self.pushButton_time_back = QtWidgets.QPushButton(self.layoutWidget)
         font = QtGui.QFont()
         font.setPointSize(15)
@@ -60,10 +64,11 @@ class Ui_Simple_player(object):
         font.setKerning(True)
         self.pushButton_time_back.setFont(font)
         self.pushButton_time_back.setStyleSheet("background-color: rgb(231, 169, 62);\n"
-"border-radius: 8px;")
+                                                "border-radius: 8px;")
         self.pushButton_time_back.setAutoDefault(False)
         self.pushButton_time_back.setObjectName("pushButton_time_back")
         self.horizontalLayout.addWidget(self.pushButton_time_back)
+    def pushButton_stop_play_reg(self):
         self.pushButton_stop_play = QtWidgets.QPushButton(self.layoutWidget)
         font = QtGui.QFont()
         font.setPointSize(13)
@@ -75,10 +80,11 @@ class Ui_Simple_player(object):
         font.setKerning(True)
         self.pushButton_stop_play.setFont(font)
         self.pushButton_stop_play.setStyleSheet("background-color: rgb(231, 169, 62);\n"
-"border-radius: 8px;")
+                                                "border-radius: 8px;")
         self.pushButton_stop_play.setAutoDefault(False)
         self.pushButton_stop_play.setObjectName("pushButton_stop_play")
         self.horizontalLayout.addWidget(self.pushButton_stop_play)
+    def pushButton_time_forward_reg(self):
         self.pushButton_time_forward = QtWidgets.QPushButton(self.layoutWidget)
         font = QtGui.QFont()
         font.setPointSize(15)
@@ -90,10 +96,11 @@ class Ui_Simple_player(object):
         font.setKerning(True)
         self.pushButton_time_forward.setFont(font)
         self.pushButton_time_forward.setStyleSheet("background-color: rgb(231, 169, 62);\n"
-"border-radius: 8px;")
+                                                   "border-radius: 8px;")
         self.pushButton_time_forward.setAutoDefault(False)
         self.pushButton_time_forward.setObjectName("pushButton_time_forward")
         self.horizontalLayout.addWidget(self.pushButton_time_forward)
+    def pushButton_choice_track_reg(self):
         self.pushButton_choice_track = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_choice_track.setGeometry(QtCore.QRect(110, 20, 221, 23))
         font = QtGui.QFont()
@@ -102,8 +109,9 @@ class Ui_Simple_player(object):
         font.setWeight(75)
         self.pushButton_choice_track.setFont(font)
         self.pushButton_choice_track.setStyleSheet("background-color: rgb(216, 73, 73);\n"
-"border-radius: 8px;")
+                                                   "border-radius: 8px;")
         self.pushButton_choice_track.setObjectName("pushButton_choice_track")
+    def label_track_name_reg(self):
         self.label_track_name = QtWidgets.QLabel(self.centralwidget)
         self.label_track_name.setGeometry(QtCore.QRect(110, 59, 221, 31))
         font = QtGui.QFont()
@@ -112,6 +120,26 @@ class Ui_Simple_player(object):
         font.setWeight(75)
         self.label_track_name.setFont(font)
         self.label_track_name.setObjectName("label_track_name")
+
+    def setupUi(self, Simple_player):
+        Simple_player.setObjectName("Simple_player")
+        Simple_player.resize(350, 191)
+        Simple_player.setStyleSheet("background-color: rgb(77, 77, 77);")
+        self.centralwidget = QtWidgets.QWidget(Simple_player)
+        self.centralwidget.setObjectName("centralwidget")
+        self.horizontalSlider_reg()
+        self.dial_volume_reg()
+        self.label_v0_reg()
+        self.label_v100_reg()
+        self.layoutWidget_reg()
+        self.horizontalLayout_reg()
+        self.pushButton_time_back_reg()
+        self.pushButton_stop_play_reg()
+        self.pushButton_time_forward_reg()
+        self.pushButton_choice_track_reg()
+        self.label_track_name_reg()
+
+
         self.layoutWidget.raise_()
         self.horizontalSlider.raise_()
         self.label_v0.raise_()
@@ -149,7 +177,6 @@ class Ui_Simple_player(object):
         """При изменении длинны трека отсылаем сигнал"""
         self.media_player.durationChanged.connect(self.get_media_player_duration)
         self.media_player.positionChanged.connect(self.set_slider_position)
-
 
     def choice_track(self):
         self.wb_patch = QtWidgets.QFileDialog.getOpenFileName()[0]
